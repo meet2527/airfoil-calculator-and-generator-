@@ -1,0 +1,32 @@
+[project]
+name = "airfoil-config"
+version = "0.1.0"
+description = "Airfoil configuration system — optimal airfoil geometry from aircraft specs"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "numpy>=1.24,<2.0",
+    "scipy>=1.10",
+    "fastapi>=0.100",
+    "uvicorn>=0.22",
+    "matplotlib>=3.7",
+    "reportlab>=4.0",
+    "ezdxf>=0.18",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+    "httpx>=0.24",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["airfoil_config*"]
