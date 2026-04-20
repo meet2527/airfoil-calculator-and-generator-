@@ -149,7 +149,7 @@ cython_debug/
 .vscode/
 
 # Project specific
-RC_Airfoil_Config.exe
+# RC_Airfoil_Config.exe (Included per user request for "zip and run" portability)
 .claude/
 scratch/
 airfoil_config.egg-info/
